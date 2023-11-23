@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calc">
+        <input id="total" placeholder="Введите сумму">
+        <button onclick="calc()">Расчитать</button>
+    </div>
+    <div class="bank">
+        <div id="cells" class="cells">
+            <!-- Основная касета -->
+            <div class="cell">
+                <span class="state">
+                    <select id="nominal" class="nominal">
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                        <option value="5000">5000</option>
+                    </select>
+                    <input type="number" min="0" oninput="validity.valid||(value='');" id="count" class="count" value="0">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+                <span>
+                    <button class="btn" onclick="addCell()">+</button>
+                    <button class="btn" onclick="deleteCell()">-</button>
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
